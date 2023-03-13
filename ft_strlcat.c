@@ -1,12 +1,5 @@
-size_t	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
+#include "ft_strlen.c"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
