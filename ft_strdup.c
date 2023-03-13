@@ -4,9 +4,19 @@ char	*ft_strdup(const char *str)
 {
 	char	*s;
 	size_t	n;
+	size_t	i;
 
-	n = ft_strlen(str);
-	s = malloc(sizeof(char) * (n + 1));
-	ft_memcpy(s, str, n);
+	n = 0;
+	i = 0;
+	while (str[n])
+		n++;
+	s = (char *)malloc(sizeof(char) * (n + 1));
+	if (s == NULL)
+		return (0);
+	while (str[i])
+	{
+		s[i] = str[i];
+		i++;
+	}
 	return (s);
 }
